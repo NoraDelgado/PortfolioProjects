@@ -1,0 +1,63 @@
+-- Global numbers across the world
+SELECT
+  SUM(new_cases) AS total_cases,
+  SUM(CAST(new_deaths AS INT)) AS total_deaths,
+  CASE
+    WHEN SUM(new_cases) = 0 THEN 0
+    ELSE (SUM(CAST(new_deaths AS INT)) / NULLIF(SUM(new_cases), 0)) * 100
+  END AS death_percentage
+FROM
+  `indigo-coder-379702.Portfolio_Project_1.Covid_Deaths`
+WHERE
+  continent IS NOT NULL
+ORDER BY
+  1, 2;
+
+-- Showing Countries with Highest Death Count per Population
+SELECT
+  location,
+  SUM(CAST(total_deaths AS INT)) AS total_death_count
+FROM
+  indigo-coder-379702.Portfolio_Project_1.Covid_Deaths
+WHERE
+  continent IS NULL
+  AND location NOT IN ('World', 'European Union', 'International', 'High income', 'Upper middle income', 'Lower middle income', 'Low income')
+GROUP BY
+  location
+ORDER BY
+  total_death_count DESC;
+
+-- Looking at Countries with Highest Infection Rate compared to Population
+SELECT
+  location,
+  population,
+  MAX(total_cases) AS highest_infection_count,
+  MAX((total_cases / population)) * 100 AS percent_population_infected
+FROM
+  `indigo-coder-379702.Portfolio_Project_1.Covid_Deaths`
+WHERE
+  continent IS NOT NULL
+GROUP BY
+  location,
+  population
+ORDER BY
+  percent_population_infected DESC;
+
+-- Shows what percentage of population with Covid per day
+SELECT
+  location,
+  date,
+  population,
+  MAX(total_cases) AS highest_infection_count,
+  MAX((total_cases / population)) * 100 AS percent_population_infected
+FROM
+  `indigo-coder-379702.Portfolio_Project_1.Covid_Deaths`
+WHERE
+  location IN ('United States', 'China', 'United Kingdom', 'France', 'Germany', 'Russia', 'Japan', 'Italy', 'United Arab Emirates', 'Israel', 'India', 'Mexico')
+GROUP BY
+  location,
+  date,
+  population
+ORDER BY
+  percent_population_infected DESC;
+
