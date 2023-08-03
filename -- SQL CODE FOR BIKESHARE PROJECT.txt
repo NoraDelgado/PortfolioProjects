@@ -1,0 +1,471 @@
+-- SQL CODE FOR BIKESHARE PROJECT PORFOLIO
+
+-- Combine all data 
+CREATE TABLE indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.raw_bike_data AS 
+SELECT 
+  ride_id, 
+  rideable_type, 
+  started_at, 
+  ended_at, 
+  start_station_name, 
+  start_station_id, 
+  end_station_name, 
+  end_station_id, 
+  start_lat, 
+  start_lng, 
+  end_lat, 
+  end_lng, 
+  ride_length, 
+  day_of_week, 
+  month, 
+  member_casual
+FROM
+  indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.202104_cyclistic_trip_data
+UNION ALL
+SELECT 
+  ride_id, 
+  rideable_type, 
+  started_at,
+  ended_at,
+  start_station_name, 
+  start_station_id, 
+  end_station_name, 
+  end_station_id, 
+  start_lat, 
+  start_lng, 
+  end_lat, 
+  end_lng, 
+  ride_length, 
+  day_of_week, 
+  month, 
+  member_casual
+FROM
+  indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.202105_cyclistic_trip_data
+UNION ALL
+SELECT 
+  ride_id, 
+  rideable_type, 
+  started_at,
+  ended_at,
+  start_station_name, 
+  start_station_id, 
+  end_station_name, 
+  end_station_id, 
+  start_lat, 
+  start_lng, 
+  end_lat, 
+  end_lng, 
+  ride_length, 
+  day_of_week, 
+  month, 
+  member_casual
+FROM
+  indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.202106_cyclistic_trip_data
+UNION ALL
+SELECT 
+  ride_id, 
+  rideable_type, 
+  started_at,
+  ended_at, 
+  start_station_name, 
+  start_station_id, 
+  end_station_name, 
+  end_station_id, 
+  start_lat, 
+  start_lng, 
+  end_lat, 
+  end_lng, 
+  ride_length, 
+  day_of_week, 
+  month, 
+  member_casual
+FROM
+  indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.202107_cyclistic_trip_data
+UNION ALL
+SELECT 
+  ride_id, 
+  rideable_type, 
+  started_at,
+  ended_at,  
+  start_station_name, 
+  start_station_id, 
+  end_station_name, 
+  end_station_id, 
+  start_lat, 
+  start_lng, 
+  end_lat, 
+  end_lng, 
+  ride_length, 
+  day_of_week, 
+  month, 
+  member_casual
+FROM
+  indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.202108_cyclistic_trip_data
+UNION ALL
+SELECT 
+  ride_id, 
+  rideable_type, 
+  started_at,
+  ended_at,  
+  start_station_name, 
+  start_station_id, 
+  end_station_name, 
+  end_station_id, 
+  start_lat, 
+  start_lng, 
+  end_lat, 
+  end_lng, 
+  ride_length, 
+  day_of_week, 
+  month, 
+  member_casual
+FROM
+  indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.202109_cyclistic_trip_data
+UNION ALL
+SELECT 
+  ride_id, 
+  rideable_type, 
+  started_at,
+  ended_at,
+  start_station_name, 
+  start_station_id, 
+  end_station_name, 
+  end_station_id, 
+  start_lat, 
+  start_lng, 
+  end_lat, 
+  end_lng, 
+  ride_length, 
+  day_of_week, 
+  month, 
+  member_casual
+FROM
+  indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.202110_cyclistic_trip_data
+UNION ALL
+SELECT 
+  ride_id, 
+  rideable_type, 
+  started_at,
+  ended_at,  
+  start_station_name, 
+  start_station_id, 
+  end_station_name, 
+  end_station_id, 
+  start_lat, 
+  start_lng, 
+  end_lat, 
+  end_lng, 
+  ride_length, 
+  day_of_week, 
+  month, 
+  member_casual
+FROM
+  indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.202111_cyclistic_trip_data
+UNION ALL
+SELECT 
+  ride_id, 
+  rideable_type, 
+  started_at,
+  ended_at,
+  start_station_name, 
+  start_station_id, 
+  end_station_name, 
+  end_station_id, 
+  start_lat, 
+  start_lng, 
+  end_lat, 
+  end_lng, 
+  ride_length, 
+  day_of_week, 
+  month, 
+  member_casual
+FROM
+  indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.202112_cyclistic_trip_data
+UNION ALL
+SELECT 
+  ride_id, 
+  rideable_type, 
+  started_at,
+  ended_at, 
+  start_station_name, 
+  start_station_id, 
+  end_station_name, 
+  end_station_id, 
+  start_lat, 
+  start_lng, 
+  end_lat, 
+  end_lng, 
+  STRING(ride_length) AS ride_length, 
+  day_of_week, 
+  month, 
+  member_casual
+FROM
+  indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.202201_cyclistic_trip_dat
+UNION ALL
+SELECT 
+  ride_id, 
+  rideable_type, 
+  started_at,
+  ended_at,  
+  start_station_name, 
+  start_station_id, 
+  end_station_name, 
+  end_station_id, 
+  start_lat, 
+  start_lng, 
+  end_lat, 
+  end_lng, 
+  ride_length, 
+  day_of_week, 
+  month, 
+  member_casual
+FROM
+  indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.202202_cyclistic_trip_data
+UNION ALL
+SELECT 
+  ride_id, 
+  rideable_type, 
+  started_at,
+  ended_at, 
+  start_station_name, 
+  start_station_id, 
+  end_station_name, 
+  end_station_id, 
+  start_lat, 
+  start_lng, 
+  end_lat, 
+  end_lng, 
+  ride_length, 
+  day_of_week, 
+  month, 
+  member_casual
+FROM
+  indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.202203_cyclistic_trip_data
+
+
+
+-- Deleting nulls
+CREATE TABLE indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.clean_bike_data AS 
+SELECT *
+FROM indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.raw_bike_data
+WHERE 
+  (start_station_name IS NOT NULL AND start_station_id IS NOT NULL) 
+  AND
+   (end_station_name IS NOT NULL AND end_station_id IS NOT NULL)
+
+-- Checking for duplicates
+SELECT 
+  ride_id,
+	started_at,
+	ended_at,
+	count(*)
+FROM indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.clean_bike_data
+GROUP BY 
+ride_id,
+	started_at,
+	ended_at
+HAVING count(*) > 1;
+
+
+
+-- Checking for nulls
+SELECT *
+FROM indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.clean_bike_data
+WHERE
+  rideable_type IS NULL
+  OR started_at IS NULL
+  OR ended_at IS NULL
+  OR start_station_name IS NULL
+  OR start_station_id IS NULL
+  OR end_station_name IS NULL
+  OR start_lat IS NULL
+  OR start_lng IS NULL
+  OR end_lat IS NULL
+  OR end_lng IS NULL
+  OR member_casual IS NULL;
+
+
+
+-- Cheking longitude and latitude values
+SELECT *
+FROM indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.clean_bike_data
+WHERE ABS(start_lat) > 90 OR ABS(start_lng) > 180
+   OR ABS(end_lat) > 90 OR ABS(end_lng) > 180;
+
+
+
+-- Checking strings
+SELECT *
+FROM indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.clean_bike_data
+WHERE member_casual != 'member'
+	AND member_casual != 'casual';
+
+
+
+-- Checking for ride times
+SELECT *
+FROM indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.clean_bike_data
+WHERE started_at >= ended_at;
+
+-- Total rows with wrong times: 35 837 rows
+
+
+
+-- Removing wrong ride times
+DELETE
+FROM indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.clean_bike_data
+WHERE started_at >= ended_at;
+
+
+
+-- Checking for short rides
+SELECT  * 
+FROM indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.clean_bike_data
+WHERE 
+  (CASE
+    WHEN ride_length LIKE '__:__:__' AND LENGTH(ride_length) = 8 THEN
+      (CAST(SUBSTR(ride_length, 1, 2) AS INT64) * 3600 +
+       CAST(SUBSTR(ride_length, 4, 2) AS INT64) * 60 +
+       CAST(SUBSTR(ride_length, 7, 2) AS INT64))
+    ELSE NULL -- or any default value for invalid rows
+  END) < 60;
+-- Total of short rides: 458 rows
+
+
+
+-- Removing short rides
+DELETE
+FROM indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.clean_bike_data
+WHERE 
+  (CASE
+    WHEN ride_length LIKE '__:__:__' AND LENGTH(ride_length) = 8 THEN
+      (CAST(SUBSTR(ride_length, 1, 2) AS INT64) * 3600 +
+       CAST(SUBSTR(ride_length, 4, 2) AS INT64) * 60 +
+       CAST(SUBSTR(ride_length, 7, 2) AS INT64))
+    ELSE NULL -- or any default value for invalid rows
+  END) < 60;
+
+
+
+-- Creating clean table for analysis
+CREATE TABLE indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.new_clean_bike_data AS
+SELECT 
+  ride_id,
+  rideable_type,
+  member_casual,
+  month,
+  day_of_week,
+  ride_length,
+  CAST(started_at AS TIME) AS new_started_at,
+  CAST(ended_at AS TIME) AS new_ended_at
+FROM 
+  indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.clean_bike_data
+WHERE
+  ride_length != "0:00:00" AND
+  ride_id NOT IN ("CB17A05B6B808671", "3EC1B5A4D4B9AB99", "518535DDFA372694")
+ORDER BY
+  ride_length DESC;
+
+
+
+-- Total memeber vs casual riders 
+SELECT 
+member_casual, 
+COUNT(ride_id) AS quantity
+FROM indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.new_clean_bike_data
+GROUP BY
+member_casual
+
+
+
+-- Bike type preference by rider type
+SELECT
+member_casual,
+rideable_type,
+COUNT(ride_id) AS quantity
+FROM
+indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.new_clean_bike_data
+GROUP BY
+member_casual, rideable_type
+ORDER BY quantity DESC
+
+
+
+-- Monthly trips by rider type
+SELECT
+  month,
+  member_casual,
+  COUNT(*) AS monthly_trip_count
+FROM
+  indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.new_clean_bike_data
+GROUP BY
+  month,
+  member_casual
+ORDER BY
+  month,
+  member_casual;
+
+
+
+-- Minimum and maximum ride lenght
+WITH parsed_data AS (
+  SELECT 
+    member_casual,
+    SPLIT(ride_length, ':') AS time_parts
+  FROM indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.new_clean_bike_data
+)
+SELECT 
+  member_casual,
+  MIN(CAST(time_parts[0] AS INT64) * 3600 + CAST(time_parts[1] AS INT64) * 60 + CAST(time_parts[2] AS INT64)) / 60 AS minimum_ride_length_minutes,
+  MAX(CAST(time_parts[0] AS INT64) * 3600 + CAST(time_parts[1] AS INT64) * 60 + CAST(time_parts[2] AS INT64)) / 60 AS maximum_ride_length_minutes
+FROM parsed_data
+GROUP BY member_casual;
+
+
+
+-- Average ride duration per month by rider type
+WITH parsed_data AS (
+  SELECT 
+    member_casual,
+    month,
+    SPLIT(ride_length, ':') AS time_parts
+  FROM indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.new_clean_bike_data
+)
+SELECT 
+  member_casual,
+  month,
+  AVG(CAST(time_parts[0] AS INT64) * 3600 + CAST(time_parts[1] AS INT64) * 60 + CAST(time_parts[2] AS INT64)) / 60 AS average_ride_length_minutes
+FROM parsed_data
+GROUP BY member_casual, month
+ORDER BY month, member_casual;
+
+
+
+-- Annual Total rides per day by rider type
+SELECT 
+  COUNT(ride_id) AS quantity,
+  member_casual,
+  day_of_week
+FROM indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.new_clean_bike_data
+GROUP BY member_casual, day_of_week
+ORDER BY day_of_week, member_casual
+
+
+
+--Average ride duration per day of week by rider type
+WITH parsed_data AS (
+  SELECT 
+    member_casual,
+    day_of_week,
+    SPLIT(ride_length, ':') AS time_parts
+  FROM indigo-coder-379702.Cyclistic_Bike_Share_Project_Portfolio.new_clean_bike_data
+)
+SELECT 
+  member_casual,
+  day_of_week,
+  AVG(CAST(time_parts[0] AS INT64) * 3600 + CAST(time_parts[1] AS INT64) * 60 + CAST(time_parts[2] AS INT64)) / 60 AS average_ride_length_minutes
+FROM parsed_data
+GROUP BY member_casual, day_of_week
+ORDER BY day_of_week, member_casual;
+
+
