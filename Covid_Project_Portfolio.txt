@@ -1,3 +1,4 @@
+-- SQL CODE FOR COVID PROJECT PORTFLIO
 -- Global numbers across the world
 SELECT
   SUM(new_cases) AS total_cases,
