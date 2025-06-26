@@ -1,0 +1,18 @@
+The Storm Chaser
+
+In this project, I'll analyze a dataset of storms using Java. I'll apply programming concepts such as methods, loops, and file input, and build this program from an object-oriented programming perspective.
+
+In this project, I will read structured data from a file, organize it into meaningful summaries, and encapsulate the information inside a class.
+
+
+This program will: 
+
+- Read storm data from a file (hurricane.data)
+
+- Calculate storm categories using the Saffir-Simpson hurricane scale
+
+- Track key statistics like maximum wind speed and minimum pressure
+
+- Filter and sort the data (category and wind speed)
+
+- Display the formatted results showing the most powerful storms
